@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Zookeeper/Zookeeper 权限控制 ACL.md",
+            "file": "Zookeeper/Zookeeper 节点特性.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Zookeeper/Zookeeper 权限控制 ACL.md",
+                "file": "Zookeeper/Zookeeper 节点特性.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Zookeeper/Zookeeper 权限控制 ACL.md",
+                "file": "Zookeeper/Zookeeper 节点特性.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Zookeeper/Zookeeper 权限控制 ACL.md"
+                "file": "Zookeeper/Zookeeper 节点特性.md"
               }
             }
           },
@@ -130,7 +130,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -138,6 +138,7 @@
   },
   "active": "7382e8d2ce6bb2ac",
   "lastOpenFiles": [
+    "Zookeeper/Zookeeper 权限控制 ACL.md",
     "Zookeeper/Zookeeper session 基本原理.md",
     "Zookeeper/Zookeeper 四字命令.md",
     "Zookeeper/ZooKeeper 数据模型 znode 结构详解.md",
@@ -146,7 +147,6 @@
     "Zookeeper/Zookeeper.md",
     "基础理论/CAP 理论.md",
     "Hadoop/Hadoop.md",
-    "基础理论/BASE 理论.md",
-    "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md"
+    "基础理论/BASE 理论.md"
   ]
 }

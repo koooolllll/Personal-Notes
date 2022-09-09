@@ -54,7 +54,7 @@ $ getAcl /runoob/child01
 $ addauth digest user1:123456
 $ getAcl /runoob/child01
 
-**提示：**加密密码是上一步创建的。
+**提示：** 加密密码是上一步创建的。
 
 ![](https://www.runoob.com/wp-content/uploads/2020/09/zk-acl-03.png)
 
