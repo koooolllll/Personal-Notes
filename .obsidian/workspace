@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "bcabd091ccf4cdca",
+    "type": "split",
+    "children": [
+      {
+        "id": "7382e8d2ce6bb2ac",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f3d91be2f6e1e6c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "725358099e88e2fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfc9cb8afc0c6420",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "684ef63caf05a70e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "78f87a13c376d312",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7f409b2cbffd841a",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fa168d7a83cffd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a63b1c746ac594cf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "23a8565a86d22dfe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "8ad155ac83387899",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "74833942ebe080c4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "7382e8d2ce6bb2ac",
+  "lastOpenFiles": [
+    "Zookeeper/Zookeeper.md",
+    "基础理论/CAP 理论.md",
+    "基础理论/BASE 理论.md",
+    "Hadoop/Hadoop.md",
+    "Hadoop/Hadoop Common.md",
+    "Hadoop/Yarn 和 Zookeeper 的关系.md",
+    "Hadoop/Hadoop YARN/YARN.md",
+    "Hadoop/Hadoop YARN/YARN ResourceManager.md",
+    "Hadoop/Hadoop YARN/YARN NodeManager.md",
+    "Hadoop/Hadoop YARN/YARN Container.md"
+  ]
+}
