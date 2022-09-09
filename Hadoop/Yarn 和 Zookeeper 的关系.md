@@ -1,4 +1,4 @@
-# [[YARN]] 和 Zookeeper 的关系
+# [[YARN]] 和 [[Zookeeper]] 的关系
 
 
 在这里引用一段知乎大佬[Reid Chan](https://www.zhihu.com/people/reidchan)对于两者关系的表述

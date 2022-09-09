@@ -31,4 +31,4 @@ Apache 其他与 Hadoop 相关的项目包括：
 -   [**Spark™**](https://spark.apache.org/)：用于 Hadoop 数据的快速通用计算引擎。Spark 提供了一个简单而富有表现力的编程模型，支持广泛的应用程序，包括 ETL、机器学习、流处理和图计算。
 -   [**Submarine**](https://submarine.apache.org/)：一个统一的 AI 平台，允许工程师和数据科学家在分布式集群中运行机器学习和深度学习工作负载。
 -   [**Tez™**](https://tez.apache.org/)：基于 Hadoop YARN 构建的通用数据流编程框架，它提供了一个强大而灵活的引擎来执行任意 DAG 任务来处理批处理和交互式用例的数据。Tez 正在被 Hadoop 生态系统中的 Hive™、Pig™ 和其他框架以及其他商业软件（例如 ETL 工具）采用，以取代 Hadoop™ MapReduce 作为底层执行引擎。
--   [**ZooKeeper™**](https://zookeeper.apache.org/)：分布式应用程序的高性能协调服务。
+-   **[[ZooKeeper]]™**：分布式应用程序的高性能协调服务。
