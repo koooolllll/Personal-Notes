@@ -7,12 +7,8 @@
         "id": "7382e8d2ce6bb2ac",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md"
-              }
+              "state": {}
             }
           },
           {
@@ -129,8 +121,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -138,15 +129,15 @@
   },
   "active": "7382e8d2ce6bb2ac",
   "lastOpenFiles": [
-    "Zookeeper/Zookeeper.md",
-    "基础理论/CAP 理论.md",
-    "Zookeeper/Zookeeper 分布式锁实现原理.md",
-    "Zookeeper/Zookeeper 节点特性.md",
-    "Zookeeper/Zookeeper Leader 选举原理.md",
-    "Zookeeper/Zookeeper 数据同步流程.md",
-    "Zookeeper/Zookeeper watcher 事件机制原理剖析.md",
-    "Zookeeper/Zookeeper 权限控制 ACL.md",
-    "Zookeeper/Zookeeper session 基本原理.md",
-    "Zookeeper/Zookeeper 四字命令.md"
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit 与 HDFS 数据块.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce 工作原理.md",
+    "Hadoop/Hadoop MapReduce/Hadoop MapReduce.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 只有 Map 阶段的 job.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 性能优化.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 推测执行.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 数据本地化.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 键值对.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 计数器.md"
   ]
 }
