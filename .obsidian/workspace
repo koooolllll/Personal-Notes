@@ -121,8 +121,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -130,6 +129,7 @@
   },
   "active": "7382e8d2ce6bb2ac",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "基础理论/CAP 理论.md",
     "基础理论/BASE 理论.md",
     "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md",
@@ -140,5 +140,17 @@
     "Zookeeper/Zookeeper 数据同步流程.md",
     "Zookeeper/Zookeeper watcher 事件机制原理剖析.md",
     "Zookeeper/Zookeeper 权限控制 ACL.md"
+=======
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit 与 HDFS 数据块.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce 工作原理.md",
+    "Hadoop/Hadoop MapReduce/Hadoop MapReduce.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 只有 Map 阶段的 job.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 性能优化.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 推测执行.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 数据本地化.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 键值对.md",
+    "Hadoop/Hadoop MapReduce/MapReduce 计数器.md"
+>>>>>>> 83fda929e006bebaed74c9c106fb95f2a740c466
   ]
 }

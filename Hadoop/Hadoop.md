@@ -13,13 +13,13 @@ Apache Hadoop软件库是一个框架，允许使用简单的编程模型在计�
 -   **[[Hadoop Common]]**：支持其他 Hadoop 模块的通用实用程序。
 -   **Hadoop 分布式文件系统 ([[HDFS]]™)**：一种分布式文件系统，可提供对应用程序数据的高吞吐量访问。
 -   **Hadoop [[YARN]]**：作业调度和集群资源管理的框架。
--   **Hadoop MapReduce**：基于 YARN 的系统，用于并行处理大型数据集
+-   **[[Hadoop MapReduce]]**：基于 YARN 的系统，用于并行处理大型数据集
 
 ## 相关项目
 
 Apache 其他与 Hadoop 相关的项目包括：
 
--   [**Ambari™**](https://ambari.apache.org/)：一个基于 Web 的工具，用于配置、管理和监控 Apache Hadoop 集群，包括对 Hadoop HDFS、Hadoop MapReduce、Hive、HCatalog、HBase、ZooKeeper、Oozie、Pig 和 Sqoop 的支持。Ambari 还提供了一个仪表板，用于查看集群健康状况，例如热图，并能够直观地查看 MapReduce、Pig 和 Hive 应用程序以及以用户友好的方式诊断其性能特征的功能。
+-   [**Ambari™**](https://ambari.apache.org/)：一个基于 Web 的工具，用于配置、管理和监控 Apache Hadoop 集群，包括对 Hadoop HDFS、[[Hadoop MapReduce]]、Hive、HCatalog、HBase、ZooKeeper、Oozie、Pig 和 Sqoop 的支持。Ambari 还提供了一个仪表板，用于查看集群健康状况，例如热图，并能够直观地查看 MapReduce、Pig 和 Hive 应用程序以及以用户友好的方式诊断其性能特征的功能。
 -   [**Avro™**](https://avro.apache.org/)：数据序列化系统。
 -   [**Cassandra™**](https://cassandra.apache.org/)：一个可扩展的多主数据库，没有单点故障。
 -   [**Chukwa™**](https://chukwa.apache.org/)：用于管理大型分布式系统的数据收集系统。
