@@ -1,29 +1,33 @@
 {
   "main": {
-    "id": "bcabd091ccf4cdca",
+    "id": "ff4b2a2ff93fd547",
     "type": "split",
     "children": [
       {
-        "id": "7382e8d2ce6bb2ac",
+        "id": "abb9b87c34719451",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Apache Hive/Hive.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "f3d91be2f6e1e6c0",
+    "id": "3b55f9e379ffc610",
     "type": "split",
     "children": [
       {
-        "id": "725358099e88e2fb",
+        "id": "fca86b1c6a959e0e",
         "type": "tabs",
         "children": [
           {
-            "id": "cfc9cb8afc0c6420",
+            "id": "ba84adf5a89a143f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,7 +35,7 @@
             }
           },
           {
-            "id": "684ef63caf05a70e",
+            "id": "ec254c25ff165275",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "78f87a13c376d312",
+            "id": "c87b8c455586fd66",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -60,23 +64,24 @@
     "width": 300
   },
   "right": {
-    "id": "7f409b2cbffd841a",
+    "id": "96e4283dd576ad36",
     "type": "split",
     "children": [
       {
-        "id": "8fa168d7a83cffd9",
+        "id": "2579ed03d4e18da0",
         "type": "tabs",
         "children": [
           {
-            "id": "a63b1c746ac594cf",
+            "id": "46c0313426b8c0ab",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": true,
-                "extraContext": true,
+                "file": "Apache Hive/Hive.md",
+                "collapseAll": false,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": false
@@ -84,18 +89,19 @@
             }
           },
           {
-            "id": "23a8565a86d22dfe",
+            "id": "6e2208947cef5fbd",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "linksCollapsed": true,
+                "file": "Apache Hive/Hive.md",
+                "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
             }
           },
           {
-            "id": "8ad155ac83387899",
+            "id": "e23d62fe8542265c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -106,15 +112,17 @@
             }
           },
           {
-            "id": "74833942ebe080c4",
+            "id": "e907a230524e3a37",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Apache Hive/Hive.md"
+              }
             }
           },
           {
-            "id": "f65e944c3794b9cd",
+            "id": "4d4e21a37990c7bd",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
@@ -127,30 +135,15 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7382e8d2ce6bb2ac",
+  "active": "abb9b87c34719451",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "基础理论/CAP 理论.md",
-    "基础理论/BASE 理论.md",
-    "Hadoop/Hadoop HDFS/HDFS Namenode 高可用.md",
+    "Hadoop/Hadoop HDFS/HDFS.md",
+    "Apache Hive/Hive.md",
+    "Hadoop/Hadoop.md",
+    "Hadoop/Hadoop MapReduce/Hadoop MapReduce.md",
     "Zookeeper/Zookeeper.md",
     "Zookeeper/Zookeeper 分布式锁实现原理.md",
-    "Zookeeper/Zookeeper 节点特性.md",
-    "Zookeeper/Zookeeper Leader 选举原理.md",
-    "Zookeeper/Zookeeper 数据同步流程.md",
-    "Zookeeper/Zookeeper watcher 事件机制原理剖析.md",
-    "Zookeeper/Zookeeper 权限控制 ACL.md"
-=======
-    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce InputSplit 与 HDFS 数据块.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 工作原理/MapReduce 工作原理.md",
-    "Hadoop/Hadoop MapReduce/Hadoop MapReduce.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 只有 Map 阶段的 job.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 性能优化.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 推测执行.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 数据本地化.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 键值对.md",
-    "Hadoop/Hadoop MapReduce/MapReduce 计数器.md"
->>>>>>> 83fda929e006bebaed74c9c106fb95f2a740c466
+    "Hadoop/Yarn 和 Zookeeper 的关系.md",
+    "Hadoop/Hadoop Common.md"
   ]
 }
