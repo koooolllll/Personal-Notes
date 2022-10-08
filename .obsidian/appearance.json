@@ -1,4 +1,5 @@
 {
   "translucency": false,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "cssTheme": "Primary"
 }

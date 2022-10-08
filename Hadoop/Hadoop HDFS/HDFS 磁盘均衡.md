@@ -13,16 +13,201 @@ HDFS 由于以下原因，在把数据存储到 Datanode 多个磁盘的时候�
 
 ## Diskbalancer
 
-Hadoop HDFS balancer 工具通过创建一个计划（命令集）并在 Datanode 执行该计划来工作。这里的计划主要描述的是有多少数据需要在磁盘之间做迁移。一个计划有很多迁移步骤，比如，源磁盘，目标磁盘和需要迁移的字节数。计划可以针对某一个 Datanode 执行特定操作。默认情况下，Diskbalancer 是未启用状态，您可以在 hdfs-site.xml 配置文件把 dfs.disk.balancer.enabled 设置为 true 来启用它。
+Hadoop HDFS balancer 工具通过创建一个计划（命令集）并在 Datanode 执行该计划来工作。这里的计划主要描述的是有多少数据需要在磁盘之间做迁移。一个计划有很多迁移步骤，比如，源磁盘，目标磁盘和需要迁移的字节数。计划可以针对某一个 Datanode 执行特定操作。默认情况下，Diskbalancer 是未启用状态，您可以在 hdfs-site.xml 配置文件把 `dfs.disk.balancer.enabled` 设置为 true 来启用它。
 
 当我们往 HDFS 上写入新的数据块，DataNode 将会使用 volume 选择策略来为这个块选择存储的地方。目前 Hadoop 支持两种 volume 选择策略：round-robin（循环策略） 和 available space（可用空间策略），选择哪种策略我们可以通过下面的参数来设置。
 
 `dfs.datanode.fsdataset.volume.choosing.policy`
 
--   循环策略：将新块均匀分布在可用磁盘上。
+-   循环策略：将新块均匀分布在可用磁盘上。可以把每个可用磁盘看作1~n的一个数组，根据数组下标来循环写入数据。
 -   可用空间策略：它是优先将数据写入具有最大可用空间的磁盘（通过百分比计算的）。
 
 ![HDFS磁盘均衡](https://www.hadoopdoc.com/media/editor/file_1570195566000_20191004212607902952.png "HDFS磁盘均衡原理")
+
+
+### 基于轮询的策略
+
+```java
+public class RoundRobinVolumeChoosingPolicy<V extends FsVolumeSpi>
+    implements VolumeChoosingPolicy<V> {
+  public static final Log LOG = LogFactory.getLog(RoundRobinVolumeChoosingPolicy.class);
+
+  // 当前轮询的磁盘位置
+  private int curVolume = 0;
+ 
+  @Override
+  public synchronized V chooseVolume(final List<V> volumes, long blockSize) throws IOException {
+
+	// 如果可用磁盘数量小于1 抛出异常
+	if(volumes.size() < 1) {
+		throw new DiskOutOfSpaceException("No more available volumes");
+	}
+    
+    // since volumes could've been removed because of the failure
+    // make sure we are not out of bounds
+    if(curVolume >= volumes.size()) {
+      curVolume = 0;
+    }
+    
+    int startVolume = curVolume;
+    long maxAvailable = 0;
+    
+    while (true) {
+      final V volume = volumes.get(curVolume);
+      curVolume = (curVolume + 1) % volumes.size();
+      long availableVolumeSize = volume.getAvailable();
+      if (availableVolumeSize > blockSize) {
+        return volume;
+      }
+      
+      if (availableVolumeSize > maxAvailable) {
+        maxAvailable = availableVolumeSize;
+      }
+      
+      if (curVolume == startVolume) {
+        throw new DiskOutOfSpaceException("Out of space: "
+            + "The volume with the most available space (=" + maxAvailable
+            + " B) is less than the block size (=" + blockSize + " B).");
+      }
+    }
+  }
+}
+```
+
+基于轮询的策略**可以保证每个卷的写入次数平衡**，但无法保证写入数据量平衡。例如，在一次写过程中，在卷A上写入了1M的块，但在卷B上写入了128M的块，A与B之间的数据量就不平衡了。久而久之，不平衡的现象就会越发严重。
+
+### 基于可用空间的策略
+
+
+这个策略比轮询更加聪明一些。它根据一个可用空间的阈值，将卷分为可用空间多的卷和可用空间少的卷两类。然后，会根据一个比较高的概率选择可用空间多的卷。不管选择了哪一类，最终都会采用轮询策略来写入这一类卷。可用空间阈值和选择卷的概率都是可以通过参数设定的。
+
+
+```java
+public class AvailableSpaceVolumeChoosingPolicy<V extends FsVolumeSpi>
+    implements VolumeChoosingPolicy<V>, Configurable {
+  
+  private static final Log LOG = LogFactory.getLog(AvailableSpaceVolumeChoosingPolicy.class);
+  
+  private final Random random;
+  
+  private long balancedSpaceThreshold = DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_THRESHOLD_DEFAULT;
+  private float balancedPreferencePercent = DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_DEFAULT;
+ 
+  AvailableSpaceVolumeChoosingPolicy(Random random) {
+    this.random = random;
+  }
+ 
+  public AvailableSpaceVolumeChoosingPolicy() {
+    this(new Random());
+  }
+ 
+  @Override
+  public synchronized void setConf(Configuration conf) {
+    balancedSpaceThreshold = conf.getLong(
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_THRESHOLD_KEY,
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_THRESHOLD_DEFAULT);
+    balancedPreferencePercent = conf.getFloat(
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_KEY,
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_DEFAULT);
+    
+    LOG.info("Available space volume choosing policy initialized: " +
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_THRESHOLD_KEY +
+        " = " + balancedSpaceThreshold + ", " +
+        DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_KEY +
+        " = " + balancedPreferencePercent);
+ 
+    if (balancedPreferencePercent > 1.0) {
+      LOG.warn("The value of " + DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_KEY +
+               " is greater than 1.0 but should be in the range 0.0 - 1.0");
+    }
+ 
+    if (balancedPreferencePercent < 0.5) {
+      LOG.warn("The value of " + DFS_DATANODE_AVAILABLE_SPACE_VOLUME_CHOOSING_POLICY_BALANCED_SPACE_PREFERENCE_FRACTION_KEY +
+               " is less than 0.5 so volumes with less available disk space will receive more block allocations");
+    }
+  }
+  
+  @Override
+  public synchronized Configuration getConf() {
+    // Nothing to do. Only added to fulfill the Configurable contract.
+    return null;
+  }
+  // 已平衡的卷的轮询策略
+  private final VolumeChoosingPolicy<V> roundRobinPolicyBalanced =
+      new RoundRobinVolumeChoosingPolicy<V>();
+  // 可用空间多的卷的轮询策略
+  private final VolumeChoosingPolicy<V> roundRobinPolicyHighAvailable =
+      new RoundRobinVolumeChoosingPolicy<V>();
+  // 可用空间少的卷的轮询策略
+  private final VolumeChoosingPolicy<V> roundRobinPolicyLowAvailable =
+      new RoundRobinVolumeChoosingPolicy<V>();
+ 
+  @Override
+  public synchronized V chooseVolume(List<V> volumes,
+      long replicaSize) throws IOException {
+    if (volumes.size() < 1) {
+      throw new DiskOutOfSpaceException("No more available volumes");
+    }
+    
+    AvailableSpaceVolumeList volumesWithSpaces =
+        new AvailableSpaceVolumeList(volumes);
+    // 如果卷都在平衡阈值之内，直接轮询
+    if (volumesWithSpaces.areAllVolumesWithinFreeSpaceThreshold()) {
+      // If they're actually not too far out of whack, fall back on pure round
+      // robin.
+      V volume = roundRobinPolicyBalanced.chooseVolume(volumes, replicaSize);
+      if (LOG.isDebugEnabled()) {
+        LOG.debug("All volumes are within the configured free space balance " +
+            "threshold. Selecting " + volume + " for write of block size " +
+            replicaSize);
+      }
+      return volume;
+    } else {
+      V volume = null;
+      // If none of the volumes with low free space have enough space for the
+      // replica, always try to choose a volume with a lot of free space.
+      long mostAvailableAmongLowVolumes = volumesWithSpaces
+          .getMostAvailableSpaceAmongVolumesWithLowAvailableSpace();
+      // 分别获取可用空间多和少的卷列表
+      List<V> highAvailableVolumes = extractVolumesFromPairs(
+          volumesWithSpaces.getVolumesWithHighAvailableSpace());
+      List<V> lowAvailableVolumes = extractVolumesFromPairs(
+          volumesWithSpaces.getVolumesWithLowAvailableSpace());
+      
+      float preferencePercentScaler =
+          (highAvailableVolumes.size() * balancedPreferencePercent) +
+          (lowAvailableVolumes.size() * (1 - balancedPreferencePercent));
+      // 计算平衡比值，balancedPreferencePercent越大，可用空间多的卷所占比重会变大
+      float scaledPreferencePercent =
+          (highAvailableVolumes.size() * balancedPreferencePercent) /
+          preferencePercentScaler;
+      // 如果可用空间少的卷不足以放得下副本，或者随机出来的概率比上面的比例小，就轮询可用空间多的卷
+      if (mostAvailableAmongLowVolumes < replicaSize ||
+          random.nextFloat() < scaledPreferencePercent) {
+        volume = roundRobinPolicyHighAvailable.chooseVolume(
+            highAvailableVolumes, replicaSize);
+        if (LOG.isDebugEnabled()) {
+          LOG.debug("Volumes are imbalanced. Selecting " + volume +
+              " from high available space volumes for write of block size "
+              + replicaSize);
+        }
+      } else {
+        volume = roundRobinPolicyLowAvailable.chooseVolume(
+            lowAvailableVolumes, replicaSize);
+        if (LOG.isDebugEnabled()) {
+          LOG.debug("Volumes are imbalanced. Selecting " + volume +
+              " from low available space volumes for write of block size "
+              + replicaSize);
+        }
+      }
+      return volume;
+    }
+  }
+}
+```
+
+*这个策略可以在一定程度上削弱不平衡的现象，但仍然无法完全消除其影响。*
+并且卷的可用空间只是诸多因素中的一个，仍然不够全面，磁盘I/O等指标也是比较重要的。但不管如何，它已经比纯轮询策略好得太多了。
 
 默认情况下，DataNode 是使用基于 round-robin 策略来写入新的数据块。然而在一个长时间运行的集群中，由于 HDFS 中的大规模文件删除或者通过往 DataNode 中添加新的磁盘，仍然会导致同一个 DataNode 中的不同磁盘存储的数据很不均衡。即使你使用的是基于可用空间的策略，卷（volume）不平衡仍可导致较低效率的磁盘I/O。比如所有新增的数据块都会往新增的磁盘上写，在此期间，其他的磁盘会处于空闲状态，这样新的磁盘将会是整个系统的瓶颈。
 
@@ -34,9 +219,9 @@ Apache Hadoop 社区之前开发了几个离线脚本来解决磁盘不均衡的
 
 首先，确保所有 DataNode 上的 `dfs.disk.balancer.enabled` 参数设置成 `true`。本例子中，我们的 DataNode 已经挂载了一个磁盘（/mnt/disk1），现在我们往这个DataNode 上挂载新的磁盘（/mnt/disk2），我们使用 df命令来显示磁盘的使用率：
 
-```bash
+```shell
 # df -h
-….
+
 /var/disk1      5.8G  3.6G  1.9G  66% /mnt/disk1
 /var/disk2      5.8G   13M  5.5G   1% /mnt/disk2
 ```
