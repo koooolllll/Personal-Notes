@@ -1,4 +1,4 @@
-# Spark Map 和 FlatMap 的比较
+# [[Spark]] Map 和 FlatMap 的比较
 
 本节将介绍Spark中`map(func)`和`flatMap(func)`两个函数的区别和基本使用。
 

@@ -1,6 +1,6 @@
-# Spark Executor
+# Executor
 
-## 什么是Executor
+## 什么是 Executor
 
 Executor是spark任务（task）的执行单元，运行在worker上，但是不等同于worker，实际上它是一组计算资源(cpu核心、memory)的集合。一个worker上的memory、cpu由多个executor共同分摊。
 

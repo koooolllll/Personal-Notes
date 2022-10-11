@@ -1,4 +1,4 @@
-# Spark spark-submit 提交应用程序
+# spark-submit 提交应用程序
 
 ## Spark支持三种集群管理方式
 
@@ -8,7 +8,7 @@
 
 > **注意**：
 > 1、在集群不是特别大，并且没有mapReduce和Spark同时运行的需求的情况下，用Standalone模式效率最高。
-> 2、Spark可以在应用间（通过集群管理器）和应用中（如果一个SparkContext中有多项计算任务）进行资源调度。
+> 2、Spark可以在应用间（通过集群管理器）和应用中（如果一个[[SparkContext]]中有多项计算任务）进行资源调度。
 
 ## Running Spark on YARN
 

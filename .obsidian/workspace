@@ -7,12 +7,8 @@
         "id": "abb9b87c34719451",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -77,14 +73,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
+                "sortOrder": "byCreatedTimeReverse",
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": true,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -129,7 +121,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -137,15 +130,15 @@
   },
   "active": "abb9b87c34719451",
   "lastOpenFiles": [
-    "基础理论/CAP 理论.md",
-    "基础理论/BASE 理论.md",
-    "Apache Hive/Hive.md",
-    "软件设计模式/观察者模式.md",
-    "Spark/Spark Core/Spark RDD/Spark RDD.md",
-    "Spark/Spark Streaming/Spark Streaming 检查点（checkpoint）.md",
-    "Spark/Spark性能优化指南/Spark性能优化指南--高级篇.md",
-    "Spark/Spark性能优化指南/Spark性能优化指南--基础篇.md",
-    "Hadoop/Hadoop HDFS/HDFS 磁盘均衡.md",
-    "Hadoop/Hadoop HDFS/HDFS 常用命令.md"
+    "Spark/spark-submit 提交应用程序.md",
+    "Spark/Stage.md",
+    "Spark/SparkContext.md",
+    "Spark/Spark 集群管理器.md",
+    "Spark/Spark 共享变量.md",
+    "Spark/Spark 基本架构及运行原理.md",
+    "Spark/Executor.md",
+    "Spark/Spark Core/Spark Map 和 FlatMap 的比较.md",
+    "Spark/Spark Core/Spark Core.md",
+    "Spark/Spark Core/RDD、DataFrame和DataSet的区别.md"
   ]
 }

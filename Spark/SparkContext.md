@@ -1,4 +1,4 @@
-# Spark SparkContext
+# SparkContext
 
 SparkContext是应用启动时创建的Spark上下文对象，是进行Spark应用开发的主要接口，是Spark上层应用与底层实现的中转站。
 

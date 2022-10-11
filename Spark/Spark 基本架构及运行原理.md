@@ -1,4 +1,4 @@
-# Spark 基本架构及运行原理
+# [[Spark]] 基本架构及运行原理
 
 ## Spark运行架构及流程
 
@@ -12,15 +12,15 @@
 
 #### Driver
 
-Spark中的Driver即运行Application的main函数并创建SparkContext，创建SparkContext的目的是为了准备Spark应用程序的运行环境，在Spark中由SparkContext负责与Cluster Manager通信，进行资源申请、任务的分配和监控等，当Executor部分运行完毕后，Driver同时负责将SparkContext关闭。
+Spark中的Driver即运行Application的main函数并创建[[SparkContext]]，创建SparkContext的目的是为了准备Spark应用程序的运行环境，在Spark中由SparkContext负责与Cluster Manager通信，进行资源申请、任务的分配和监控等，当[[Executor]]部分运行完毕后，Driver同时负责将SparkContext关闭。
 
 #### Worker
 
-集群中任何一个可以运行spark应用代码的节点。Worker就是物理节点，可以在上面启动Executor进程。
+集群中任何一个可以运行spark应用代码的节点。Worker就是物理节点，可以在上面启动[[Executor]]进程。
 
 #### Executor
 
-在每个Worker上为某应用启动的一个进程，该进程负责运行Task，并且负责将数据存在内存或者磁盘上，每个任务都有各自独立的Executor。Executor是一个执行Task的容器。它的主要职责是：
+Executor 在每个Worker上为某应用启动的一个进程，该进程负责运行Task，并且负责将数据存在内存或者磁盘上，每个任务都有各自独立的Executor。Executor是一个执行Task的容器。它的主要职责是：
 
 -   初始化程序要执行的上下文SparkEnv，解决应用程序需要运行时的jar包的依赖，加载类。
 -   向cluster manager汇报当前的任务状态。
@@ -46,7 +46,7 @@ Executor是一个应用程序运行的监控和执行容器。
 
 #### DAG
 
-有向无环图，反映RDD之间的依赖关系。
+有向无环图（[[DAG]]），反映RDD之间的依赖关系。
 
 #### Task
 
@@ -56,7 +56,7 @@ Executor是一个应用程序运行的监控和执行容器。
 
 ##### shuffleMapTask
 
-输出是shuffle所需数据,stage的划分也以此为依据，shuffle之前的所有变换是一个stage，shuffle之后的操作是另一个stage。
+输出是shuffle所需数据,[[stage]]的划分也以此为依据，shuffle之前的所有变换是一个stage，shuffle之后的操作是另一个stage。
 
 ##### resultTask
 
@@ -101,7 +101,7 @@ block位于存储空间、partition位于计算空间，block的大小是固定�
 
 一个Application由一个Driver和若干个Job构成，一个Job由多个Stage构成，一个Stage由多个没有Shuffle关系的Task组成。
 
-当执行一个Application时，Driver会向集群管理器申请资源，启动Executor，并向Executor发送应用程序代码和文件，然后在Executor上执行Task，运行结束后，执行结果会返回给Driver，或者写到HDFS或者其它数据库中。
+当执行一个Application时，Driver会向集群管理器申请资源，启动[[Executor]]，并向Executor发送应用程序代码和文件，然后在Executor上执行Task，运行结束后，执行结果会返回给Driver，或者写到HDFS或者其它数据库中。
 
 与Hadoop MapReduce计算框架相比，Spark所采用的Executor有两个优点：
 
