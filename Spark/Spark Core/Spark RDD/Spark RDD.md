@@ -6,9 +6,9 @@ RDD（Resilient Distributed Dataset），即弹性分布式数据集，是Spark�
 
 RDD是“Resilient Distributed Dataset”的缩写，从全称就可以了解到RDD的一些典型特性。
 
--   **Resilient（弹性）**：RDD之间会形成有向无环图（DAG），如果RDD丢失了或者失效了，可以从父RDD重新计算得到。即容错性。
--   **Distributed（分布式）**：RDD的数据是以逻辑分区的形式分布在集群的不同节点的。
--   **Dataset（数据集）**：即RDD存储的数据记录，可以从外部数据生成RDD，例如Json文件，CSV文件，文本文件，数据库等。
+- **Resilient（弹性）**：RDD之间会形成有向无环图（DAG），如果RDD丢失了或者失效了，可以从父RDD重新计算得到。即容错性。
+- **Distributed（分布式）**：RDD的数据是以逻辑分区的形式分布在集群的不同节点的。
+- **Dataset（数据集）**：即RDD存储的数据记录，可以从外部数据生成RDD，例如Json文件，CSV文件，文本文件，数据库等。
 
 ## 创建RDD的3种方式
 
