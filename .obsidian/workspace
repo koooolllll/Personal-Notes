@@ -7,12 +7,8 @@
         "id": "abb9b87c34719451",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Spark/Spark性能优化指南/Spark性能优化指南——高级篇.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spark/Spark性能优化指南/Spark性能优化指南——高级篇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spark/Spark性能优化指南/Spark性能优化指南——高级篇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Spark/Spark性能优化指南/Spark性能优化指南——高级篇.md"
-              }
+              "state": {}
             }
           },
           {
@@ -137,8 +129,8 @@
   },
   "active": "abb9b87c34719451",
   "lastOpenFiles": [
+    "Spark/Spark性能优化指南/Spark性能优化指南--高级篇.md",
     "Spark/Spark性能优化指南/Spark性能优化指南--基础篇.md",
-    "Spark/Spark性能优化指南/Spark性能优化指南——高级篇.md",
     "Apache Hive/Hive.md",
     "Hadoop/Hadoop HDFS/HDFS 磁盘均衡.md",
     "Hadoop/Hadoop HDFS/HDFS 常用命令.md",
