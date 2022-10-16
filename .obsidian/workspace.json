@@ -4,16 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "abb9b87c34719451",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
-            "mode": "preview",
-            "source": false
+        "id": "505b078815380ba8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abb9b87c34719451",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Apache Hive/Hive.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b4efbeb1af80b29d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Apache Hive/Hive 架构.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -31,7 +50,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -77,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
+                "file": "Apache Hive/Hive 架构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byCreatedTimeReverse",
@@ -94,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
+                "file": "Apache Hive/Hive 架构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -117,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md"
+                "file": "Apache Hive/Hive 架构.md"
               }
             }
           },
@@ -136,17 +157,20 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "abb9b87c34719451",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "b4efbeb1af80b29d",
   "lastOpenFiles": [
+    "Apache Hive/Hive 架构.md",
+    "Apache Hive/Hive.md",
+    "Spark/Spark Streaming/Spark Streaming 检查点（checkpoint）.md",
+    "Spark/Spark Streaming/Spark Streaming.md",
+    "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
     "Spark/Spark Core/Spark RDD/Spark RDD 缓存机制.md",
     "Spark/Spark Core/Spark RDD/Spark RDD.md",
     "Spark/Spark Core/DAG.md",
     "Hadoop/Yarn 和 Zookeeper 的关系.md",
-    "Hadoop/Hadoop Common.md",
-    "Hadoop/Hadoop.md",
-    "Hadoop/Hadoop HDFS/HDFS 常用命令.md",
-    "Spark/spark-submit 提交应用程序.md",
-    "Spark/Stage.md",
-    "Spark/SparkContext.md"
+    "Hadoop/Hadoop Common.md"
   ]
 }

@@ -1,5 +1,6 @@
 {
   "translucency": false,
   "theme": "obsidian",
-  "cssTheme": "Primary"
+  "cssTheme": "Primary",
+  "accentColor": ""
 }
