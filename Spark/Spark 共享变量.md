@@ -2,13 +2,13 @@
 
 ## 共享变量
 
-一般情况下，当一个传递给Spark操作(例如map和reduce)的函数在远程节点上面运行时，Spark操作实际上操作的是这个函数所用变量的一个独立副本。这些变量被复制到每台机器上，并且这些变量在远程机器上的所有更新都不会传递回驱动程序。通常跨任务的读写变量是低效的，但是，Spark还是为两种常见的使用模式提供了两种有限的共享变量：**广播变量（broadcast variable）**和**累加器（accumulator）**
+一般情况下，当一个传递给Spark操作(例如map和reduce)的函数在远程节点上面运行时，Spark操作实际上操作的是这个函数所用变量的一个独立副本。这些变量被复制到每台机器上，并且这些变量在远程机器上的所有更新都不会传递回驱动程序。通常跨任务的读写变量是低效的，但是，Spark还是为两种常见的使用模式提供了两种有限的共享变量：**广播变量（broadcast variable）** 和 **累加器（accumulator）**
 
 ### 广播变量
 
-**广播变量**允许程序员缓存一个只读的变量在每台机器上面，而不是每个任务保存一份拷贝。例如，利用广播变量，我们能够以一种更有效率的方式将一个大数据量输入集合的副本分配给每个节点。（Broadcast variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks.They can be used, for example,to give every node a copy of a large input dataset in an efficient manner.）Spark也尝试着利用有效的广播算法去分配广播变量，以减少通信的成本。
+**广播变量** 允许程序员缓存一个只读的变量在每台机器上面，而不是每个任务保存一份拷贝。例如，利用广播变量，我们能够以一种更有效率的方式将一个大数据量输入集合的副本分配给每个节点。（Broadcast variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks.They can be used, for example,to give every node a copy of a large input dataset in an efficient manner.）Spark也尝试着利用有效的广播算法去分配广播变量，以减少通信的成本。
 
-一个广播变量可以通过调用`SparkContext.broadcast(v)`方法从一个初始变量v中创建。广播变量是v的一个包装变量，它的值可以通过value方法访问，下面的代码说明了这个过程：
+一个广播变量可以通过调用`SparkContext.broadcast(v)`方法`从一个初始变量v中创建。广播变量是v的一个包装变量，它的值可以通过value方法访问，下面的代码说明了这个过程：
 
 ```scala
 scala> val broadcastVar = sc.broadcast(Array(1, 2, 3))

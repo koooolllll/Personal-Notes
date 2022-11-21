@@ -35,8 +35,21 @@ RDD存储级别主要有以下几种。
 
 异常源码如下：
 
-```
- private def persist(newLevel: StorageLevel, allowOverride: Boolean): this.type = {    // TODO: Handle changes of StorageLevel    if (storageLevel != StorageLevel.NONE && newLevel != storageLevel && !allowOverride) {      throw new UnsupportedOperationException(        "Cannot change storage level of an RDD after it was already assigned a level")    }    // If this is the first time this RDD is marked for persisting, register it    // with the SparkContext for cleanups and accounting. Do this only once.    if (storageLevel == StorageLevel.NONE) {      sc.cleaner.foreach(_.registerRDDForCleanup(this))      sc.persistRDD(this)    }    storageLevel = newLevel    this  }
+```scala
+private def persist(newLevel: StorageLevel, allowOverride: Boolean): this.type = {    
+ // TODO: Handle changes of StorageLevel    
+ if (storageLevel != StorageLevel.NONE && newLevel != storageLevel && !allowOverride) {
+ throw new UnsupportedOperationException(        "Cannot change storage level of an RDD after it was already assigned a level")    
+ }    
+ // If this is the first time this RDD is marked for persisting, register it    
+ // with the SparkContext for cleanups and accounting. Do this only once.    
+ if (storageLevel == StorageLevel.NONE) { 
+ sc.cleaner.foreach(_.registerRDDForCleanup(this))      
+ sc.persistRDD(this)    
+ }    
+ storageLevel = newLevel    
+ this  
+ }
 ```
 
 ### MEMORY_ONLY

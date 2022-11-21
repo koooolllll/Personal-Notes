@@ -16,13 +16,13 @@ Transformation用于对RDD的创建，同时还提供大量操作方法，包括
 
 **Scala**
 
-```
+```scala
 scala> val nums = sc.parallelize(List(1,2,3,4))nums: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[4] at parallelize at <console>:27scala>nums.take(4).foreach(println)1234
 ```
 
 **Python**
 
-```
+```python
 >>> nums = sc.parallelize([1,2,3,4])>>> for num in nums.take(4):...     print num...1234>>> new_nums = nums.map(lambda x: x*2)>>> for new_num in new_nums.take(4):...     print new_num...2468
 ```
 
@@ -32,13 +32,13 @@ scala> val nums = sc.parallelize(List(1,2,3,4))nums: org.apache.spark.rdd.RDD[In
 
 **Scala**
 
-```
+```scala
 scala> val string = sc.parallelize(List("i love you"))string: org.apache.spark.rdd.RDD[String] = ParallelCollectionRDD[5] at parallelize at <console>:27scala> val new_str = string.flatMap(line=>line.split(" "))new_str: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[6] at flatMap at <console>:29scala> new_str.take(3).foreach(println)iloveyou
 ```
 
 **Python**
 
-```
+```python
 >>> string = sc.parallelize(["i love you"])>>> new_str = string.flatMap(lambda str:str.split(" "))</span>>>> for str in new_str.take(3):...     print str... iloveyou
 ```
 
@@ -48,13 +48,13 @@ scala> val string = sc.parallelize(List("i love you"))string: org.apache.spark.r
 
 **Scala**
 
-```
+```scala
 scala> val string = sc.parallelize(List("i love you"))string: org.apache.spark.rdd.RDD[String] = ParallelCollectionRDD[7] at parallelize at <console>:27scala> string.first()res3: String = i love youscala><pre name="code" class="java">scala> val string = sc.parallelize(List("I love you"))scala> val new_str = string.filter(line =>line.contains("love"))new_str: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[6] at filter at <console>:23scala> new_str.foreach(println)I love you
 ```
 
 **Python**
 
-```
+```python
 >>> string = sc.parallelize(["i love you"])>>> new_str = string.filter(lambda line : "you" in line)>>> new_str.first()'i love you'
 ```
 
