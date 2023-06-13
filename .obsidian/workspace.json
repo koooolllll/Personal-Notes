@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git提交规范/Git提交规范.md",
+                "file": "Orcale/Orcale建表相关/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git提交规范/Git提交规范.md",
+                "file": "Orcale/Orcale建表相关/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git提交规范/Git提交规范.md",
+                "file": "Orcale/Orcale建表相关/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git提交规范/Git提交规范.md"
+                "file": "Orcale/Orcale建表相关/未命名.md"
               }
             }
           }
@@ -148,8 +148,12 @@
   },
   "active": "c073014fe1bb6ae9",
   "lastOpenFiles": [
-    "Spark/Spark 基本架构及运行原理.md",
     "Git/Git提交规范/Git提交规范.md",
+    "Orcale/Orcale建表相关/未命名.md",
+    "Orcale/Orcale建表相关",
+    "Orcale/Orcale基础",
+    "Orcale",
+    "Spark/Spark 基本架构及运行原理.md",
     "Git/Git提交规范",
     "Git",
     "Spark/Spark 集群管理器.md",
