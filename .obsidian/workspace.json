@@ -13,28 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Orcale/Orcale建表相关/Orcale建表注意事项.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "4b3c73d051051d69",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "8d8d3822b3bbaa44",
+            "id": "73312f82f0fb28e5",
             "type": "leaf",
             "state": {
-              "type": "reveal-preview-view",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md"
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -100,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md"
+                "file": "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md"
               }
             }
           }
@@ -164,9 +161,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c073014fe1bb6ae9",
+  "active": "73312f82f0fb28e5",
   "lastOpenFiles": [
     "Orcale/Orcale建表相关/Orcale建表注意事项.md",
+    "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md",
+    "Excalidraw",
     "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
     "Apache Hive/Hive.md",
     "Git/Git提交规范/Git提交规范.md",
