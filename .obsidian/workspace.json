@@ -21,6 +21,20 @@
             }
           }
         ]
+      },
+      {
+        "id": "4b3c73d051051d69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d8d3822b3bbaa44",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,6 +153,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -152,6 +168,7 @@
   "lastOpenFiles": [
     "Orcale/Orcale建表相关/Orcale建表注意事项.md",
     "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+    "Apache Hive/Hive.md",
     "Git/Git提交规范/Git提交规范.md",
     "Orcale/Orcale建表相关",
     "Orcale/Orcale基础",
@@ -168,7 +185,6 @@
     "Hadoop/Hadoop YARN/YARN ApplicationMaster.md",
     "Hadoop/Hadoop YARN/YARN 失败类型及处理方式.md",
     "Hadoop/Hadoop YARN/YARN ResourceManager.md",
-    "Apache Hive/Hive.md",
     "基础理论/CAP 理论.md",
     "基础理论/BASE 理论.md"
   ]
