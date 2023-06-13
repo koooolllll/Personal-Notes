@@ -13,8 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Orcale/Orcale建表相关/Orcale建表注意事项.md",
+                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Orcale/Orcale建表相关/Orcale建表注意事项.md",
+                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Orcale/Orcale建表相关/Orcale建表注意事项.md",
+                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Orcale/Orcale建表相关/Orcale建表注意事项.md"
+                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md"
               }
             }
           }
@@ -143,13 +144,15 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "c073014fe1bb6ae9",
   "lastOpenFiles": [
-    "Git/Git提交规范/Git提交规范.md",
     "Orcale/Orcale建表相关/Orcale建表注意事项.md",
+    "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+    "Git/Git提交规范/Git提交规范.md",
     "Orcale/Orcale建表相关",
     "Orcale/Orcale基础",
     "Orcale",
