@@ -31,9 +31,31 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "85cc79f6a705727c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "制程良率报表分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "418ff6062935d82a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -99,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sublime text/Sublime text 常用功能和常用快捷键.md",
+                "file": "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sublime text/Sublime text 常用功能和常用快捷键.md",
+                "file": "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sublime text/Sublime text 常用功能和常用快捷键.md"
+                "file": "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md"
               }
             }
           }
@@ -163,10 +185,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "73312f82f0fb28e5",
+  "active": "418ff6062935d82a",
   "lastOpenFiles": [
-    "Git/Git提交规范/Git提交规范.md",
+    "制程良率报表分析.md",
+    "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md",
     "Sublime text/Sublime text 常用功能和常用快捷键.md",
+    "Git/Git提交规范/Git提交规范.md",
     "Sublime text",
     "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md",
     "Orcale/Orcale建表相关/Orcale建表注意事项.md",
