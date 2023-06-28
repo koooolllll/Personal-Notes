@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Orcale/Oracle运维/Oracle 数据恢复.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Orcale/Oracle运维/Oracle 数据恢复.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+                "file": "Orcale/Oracle运维/Oracle 数据恢复.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Orcale/Orcale建表相关/Oracle 约束 constraint.md"
+                "file": "Orcale/Oracle运维/Oracle 数据恢复.md"
               }
             }
           }
@@ -189,8 +189,10 @@
   },
   "active": "418ff6062935d82a",
   "lastOpenFiles": [
-    "Orcale/Orcale建表相关/Orcale建表注意事项.md",
     "Orcale/Orcale建表相关/Oracle 约束 constraint.md",
+    "Orcale/Oracle运维/Oracle 数据恢复.md",
+    "Orcale/Oracle运维",
+    "Orcale/Orcale建表相关/Orcale建表注意事项.md",
     "Git/Git提交规范/Git提交规范.md",
     "Excalidraw/Drawing 2023-06-15 16.51.18.excalidraw.md",
     "Excalidraw/Drawing 2023-06-13 14.41.18.excalidraw.md",
