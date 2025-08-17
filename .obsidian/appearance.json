@@ -1,6 +1,7 @@
 {
   "translucency": false,
   "theme": "obsidian",
-  "cssTheme": "Primary",
-  "accentColor": ""
+  "cssTheme": "Minimal",
+  "accentColor": "",
+  "interfaceFontFamily": "Microsoft YaHei UI,Microsoft YaHei"
 }
