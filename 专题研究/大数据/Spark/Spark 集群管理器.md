@@ -1,6 +1,6 @@
 # [[Spark]] 集群管理器
 
-Spark最主要资源管理方式按排名为Hadoop [[Yarn]], Apache Standalone 和Mesos。在单机使用时，Spark还可以采用最基本的local模式。
+Spark最主要资源管理方式按排名为Hadoop [[YARN]], Apache Standalone 和Mesos。在单机使用时，Spark还可以采用最基本的local模式。
 
 目前Apache Spark支持三种分布式部署方式，分别是standalone、spark on mesos和 spark on YARN，其中，第一种类似于MapReduce 1.0所采用的模式，内部实现了容错性和资源管理，后两种则是未来发展的趋势，部分容错性和资源管理交由统一的资源管理系统完成，让Spark运行在一个通用的资源管理系统之上，这样可以与其他计算框架，比如MapReduce，公用一个集群资源，最大的好处是降低运维成本和提高资源利用率（资源按需分配）。
 

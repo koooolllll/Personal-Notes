@@ -25,10 +25,14 @@
             "id": "b4efbeb1af80b29d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Doris安装部署.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Doris安装部署"
             }
           }
         ],
@@ -134,11 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Doris安装部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "Doris安装部署 的出链列表"
             }
           },
           {
@@ -202,15 +207,31 @@
   },
   "active": "b4efbeb1af80b29d",
   "lastOpenFiles": [
-    "Apache Hive/Hive 架构.md",
-    "Apache Hive/Hive.md",
-    "Spark/Spark Streaming/Spark Streaming 检查点（checkpoint）.md",
-    "Spark/Spark Streaming/Spark Streaming.md",
-    "Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
-    "Spark/Spark Core/Spark RDD/Spark RDD 缓存机制.md",
-    "Spark/Spark Core/Spark RDD/Spark RDD.md",
-    "Spark/Spark Core/DAG.md",
-    "Hadoop/Yarn 和 Zookeeper 的关系.md",
-    "Hadoop/Hadoop Common.md"
+    "专题研究/大数据/Spark/Spark性能优化指南/Spark性能优化指南--基础篇.md",
+    "专题研究/大数据/Spark/Spark性能优化指南/Spark性能优化指南--高级篇.md",
+    "专题研究/大数据/Spark/Spark Streaming/Spark Streaming DStream.md",
+    "专题研究/大数据/Spark/Spark Streaming/Spark Streaming 检查点（checkpoint）.md",
+    "专题研究/大数据/Spark/Spark Streaming/Spark Streaming.md",
+    "专题研究/大数据/Zookeeper/Zookeeper 权限控制 ACL.md",
+    "专题研究/大数据/Zookeeper/Zookeeper 节点特性.md",
+    "专题研究/大数据/Zookeeper/Zookeeper 分布式锁实现原理.md",
+    "Doris安装部署.md",
+    "README.md",
+    "专题研究/大数据",
+    "2025-08-17.md",
+    "未命名.canvas",
+    "未命名.md",
+    "专题研究",
+    "归档资料",
+    "将来可能",
+    "等待处理",
+    "专题研究/大数据/Apache Hive/Hive 架构.md",
+    "专题研究/大数据/Apache Hive/Hive.md",
+    "专题研究/大数据/Spark/Spark Core/Spark RDD/Spark RDD 基本操作.md",
+    "专题研究/大数据/Spark/Spark Core/Spark RDD/Spark RDD 缓存机制.md",
+    "专题研究/大数据/Spark/Spark Core/Spark RDD/Spark RDD.md",
+    "专题研究/大数据/Spark/Spark Core/DAG.md",
+    "专题研究/大数据/Hadoop/Yarn 和 Zookeeper 的关系.md",
+    "专题研究/大数据/Hadoop/Hadoop Common.md"
   ]
 }

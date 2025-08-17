@@ -10,5 +10,5 @@ BASE 是 Basically Available(基本可用)、Soft-state(软状态) 和 Eventuall
 
 BASE 理论是对 CAP 中的一致性和可用性进行一个权衡的结果，理论的核心思想就是：我们无法做到强一致，但每个应用都可以根据自身的业务特点，采用适当的方式来使系统达到最终一致性。
 
-大数据很多架构都是基于 BASE 理论设计的，如[[Hadoop]]，[[zookeeper]]
+大数据很多架构都是基于 BASE 理论设计的，如[[Hadoop]]，[[Zookeeper]]
 

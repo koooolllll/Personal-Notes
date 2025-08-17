@@ -5,10 +5,10 @@
 **[[Spark RDD]]**
 RDD是一种弹性分布式数据集，是一种只读分区数据。它是spark的基础数据结构，具有内存计算能力、数据容错性以及数据不可修改特性。
 
-**[[Spark SQL Dataframe]]**
+**[[Spark SQL DataFrame]]**
 Dataframe也是一种不可修改的分布式数据集合，它可以按列查询数据，类似于关系数据库里面的表结构。可以对数据指定数据模式（schema）。
 
-**[[Spark SQL Dataset]]**
+**[[Spark SQL DataSet]]**
 Dataset是DataFrame的扩展，它提供了类型安全，面向对象的编程接口。也就是说DataFrame是Dataset的一种特殊形式。
 
 ## 共同点

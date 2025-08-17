@@ -56,7 +56,7 @@ Executor是一个应用程序运行的监控和执行容器。
 
 ##### shuffleMapTask
 
-输出是shuffle所需数据,[[stage]]的划分也以此为依据，shuffle之前的所有变换是一个stage，shuffle之后的操作是另一个stage。
+输出是shuffle所需数据,[[Stage]]的划分也以此为依据，shuffle之前的所有变换是一个stage，shuffle之后的操作是另一个stage。
 
 ##### resultTask
 
